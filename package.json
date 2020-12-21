@@ -1,15 +1,39 @@
 {
-  "name": "hubot-dynamic-conversation",
-  "version": "1.0.2",
-  "description": "Have conversation with user without the hustle of `robot.hear`",
-  "main": "index.js",
+  "_from": "hubot-dynamic-conversation",
+  "_inBundle": false,
+  "_integrity": "sha1-lLso38oCr3+w5+ASAEMcUVspIRs=",
+  "_location": "/hubot-dynamic-conversation",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "hubot-dynamic-conversation",
+    "name": "hubot-dynamic-conversation",
+    "escapedName": "hubot-dynamic-conversation",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hubot-dynamic-conversation/-/hubot-dynamic-conversation-1.0.1.tgz",
+  "_shasum": "94bb28dfca02af7fb0e7e01200431c515b29211b",
+  "_spec": "hubot-dynamic-conversation",
+  "_where": "/Users/khoint/project/1mg/myhubot",
+  "author": "Eugene Asiedu <ngene84@gmail.com> (https://github.com/ngenerio)",
+  "bundleDependencies": false,
   "contributors": [
     "Gary Chapman <gary.chapman@4thparty.com.au>",
     "Tim Kinnane <tim.kinnane@4thparty.com.au>"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "async-series": "0.0.1",
+    "hubot-conversation": "^1.1.1"
   },
+  "deprecated": false,
+  "description": "Have conversation with user without the hustle of `robot.hear`",
   "keywords": [
     "hubot",
     "dynamic",
@@ -19,10 +43,10 @@
     "bot",
     "robot"
   ],
-  "author": "Eugene Asiedu <ngene84@gmail.com> (https://github.com/ngenerio)",
   "license": "MIT",
-  "dependencies": {
-    "async-series": "0.0.1",
-    "hubot-conversation": "^1.1.1"
+  "main": "index.js",
+  "name": "@khoint/hubot-dynamic-conversation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

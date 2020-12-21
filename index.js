@@ -9,6 +9,7 @@ var Dialog = require('./dialog');
 function DynamicConversation(robot) {
   this.robot = robot;
   this.switchBoard = new Conversation(robot, 'user');
+  // robot.brain.data.announcements = robot.brain.data.announcements || [];
 }
 
 /**
@@ -31,21 +32,12 @@ function DynamicConversation(robot) {
  */
 DynamicConversation.prototype.start = function (msg, dialogOptions, callback) {
   var dialog = new Dialog(this.switchBoard, msg, dialogOptions, this.robot);
-
-  // override hubot-conversation's dialogTimeout so we can sendDirect()
-  dialog.dialog.dialogTimeout = function (msg) {
-      msg.sendDirect(dialogOptions.onTimeoutMessage || "Sorry, I timed out. You'll have to start again.");
-      callback(new Error('timed out'), msg, dialog)
-  };
-
   dialog.on('end', function (err, res) {
-
-    // HACK: send a fake timeout to the hubot-conversation object, which will force it to unregister the underlying dialog 
-    dialog.dialog.emit('timeout'); 
-
     if (err) {
       return callback(err, res, dialog);
     }
+
+    // this.robot.brain.data.announcements.unshift(dialog.fetch());
     return callback(null, res, dialog);
   }.bind(this));
   dialog.start();
